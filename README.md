@@ -1,5 +1,14 @@
 # eucalypsih_rcrapet
 
+Untuk menjadikan Micro sebagai editor default di Git, Anda hanya perlu menjalankan satu baris perintah di Termux.
+
+Cara Mengatur Micro sebagai Default Editor
+
+Jalankan perintah berikut di terminal Anda:
+```
+git config --global core.editor "micro"
+```
+
 Mematikan Fitur History Secara Permanen
 Jika Anda tidak ingin Micro merekam atau mengingat riwayat pencarian dan perintah Anda lagi di masa mendatang:
 ```
@@ -63,7 +72,7 @@ Paling Populer untuk Coding & Navigasifilemanager: Menambahkan panel tree-view f
 
 Untuk mengaktifkan fitur `softwrap` (pembungkusan baris panjang agar otomatis turun ke bawah tanpa memotong kata atau membuat scroll horizontal) di [Micro editor](https://micro-editor.github.io), Anda bisa menggunakan dua cara: sementara lewat perintah terminal, atau permanen lewat file konfigurasi.
 
-**1. Cara Sementara (Lewat Command Bar)**
+**1. Cara Sementara (Lewat Command Bar)**<br>
 Cara ini hanya berlaku untuk sesi edit yang sedang aktif. Jika Anda keluar dari editor, pengaturannya akan kembali ke bawaan.
 
 - Tekan tombol `Ctrl + e` untuk membuka baris perintah (*command bar*) di bagian bawah.
@@ -78,7 +87,7 @@ set wordwrap true
 ```
 
 
-**2. Cara Permanen (Mengubah File Konfigurasi)**
+**2. Cara Permanen (Mengubah File Konfigurasi)**<br>
 Cara ini akan membuat fitur 'softwrap' selalu aktif setiap kali Anda membuka file baru di Micro.
 
 - Buka file konfigurasi utama Micro dengan perintah:
@@ -95,6 +104,38 @@ micro ~/.config/micro/settings.json
 
 ```
 - Tekan `Ctrl + s` untuk menyimpan file, lalu `Ctrl + q` untuk keluar.
+
+
+
+Untuk membuka file lain saat Anda sudah berada di dalam editor Micro, Anda bisa menggunakan sistem Tab atau membuka file langsung di jendela yang sama.
+
+Berikut adalah cara-cara praktisnya:
+
+**1. Membuka di Tab Baru (Paling Direkomendasikan)**<br>
+Anda bisa membuka file baru tanpa menutup file yang sedang Anda edit.
+
+- Tekan tombol `Ctrl+e` untuk membuka baris perintah (*command bar*) di bagian bawah layar.
+- Ketik `tab [nama_file]` lalu tekan Enter.
+- *Contoh*: `tab script.py`
+
+
+**2. Membuka Langsung di Jendela yang Sama**<br>
+Jika ingin menutup file saat ini dan langsung menggantinya dengan file lain:
+- Tekan tombol `Ctrl+e`.
+- Ketik `open [nama_file]` lalu tekan **Enter**.
+- *Contoh*: `open config.json`
+
+
+**3. Cara Navigasi Antar Tab**
+
+Jika Anda membuka banyak file menggunakan sistem **Tab** (Cara 1), gunakan shortcut ini untuk berpindah:
+
+- **Pindah ke tab kanan**: `Alt+.` (tombol Alt bersamaan dengan titik)
+- **Pindah ke tab kiri**: `Alt+,` (tombol Alt bersamaan dengan koma)
+- **Menutup tab yang aktif**: `Ctrl+q`
+
+
+
 
 
 
