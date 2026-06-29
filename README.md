@@ -59,3 +59,54 @@ plugin remove filemanager : Menghapus plugin.
 
 Paling Populer untuk Coding & Navigasifilemanager: Menambahkan panel tree-view folder di sisi kiri layar. Sangat berguna untuk melihat struktur file proyek tanpa harus keluar dari Micro.lsp: Menambahkan dukungan Language Server Protocol. Fitur ini membawa fungsi IDE modern seperti auto-completion pintar, melihat definisi fungsi (Alt+D), dan melacak error penulisan kode.jump: Berfungsi melompat langsung ke baris fungsi (function), kelas (class), atau judul bab (heading Markdown) tertentu cukup dengan menekan tombol F4.fzf: Integrasi dengan Fuzzy Finder terminal. Membantu Anda mencari dan membuka file secara instan di dalam folder proyek yang besar hanya dengan mengetikkan fragmen namanya.snippets: Memungkinkan Anda menyisipkan templat kode siap pakai (boilerplate code) sesuai dengan bahasa pemrograman yang sedang digunakan secara otomatis.
 
+
+
+Untuk mengaktifkan fitur `softwrap` (pembungkusan baris panjang agar otomatis turun ke bawah tanpa memotong kata atau membuat scroll horizontal) di [Micro editor](https://micro-editor.github.io), Anda bisa menggunakan dua cara: sementara lewat perintah terminal, atau permanen lewat file konfigurasi.
+
+**1. Cara Sementara (Lewat Command Bar)**
+Cara ini hanya berlaku untuk sesi edit yang sedang aktif. Jika Anda keluar dari editor, pengaturannya akan kembali ke bawaan.
+
+- Tekan tombol `Ctrl + e` untuk membuka baris perintah (*command bar*) di bagian bawah.
+- Ketik perintah berikut lalu tekan **Enter**:
+```
+set softwrap true
+```
+
+- (*Opsional*) Jika Anda ingin teks dibungkus rapi per kata (bukan terpotong di tengah huruf), jalankan perintah satu lagi:
+```
+set wordwrap true
+```
+
+
+**2. Cara Permanen (Mengubah File Konfigurasi)**
+Cara ini akan membuat fitur 'softwrap' selalu aktif setiap kali Anda membuka file baru di Micro.
+
+- Buka file konfigurasi utama Micro dengan perintah:
+```
+micro ~/.config/micro/settings.json
+```
+
+- Tambahkan baris `"softwrap": true` dan `"wordwrap": true` di dalam kurung kurawal JSON. Contoh struktur filenya akan terlihat seperti ini:
+```
+{
+    "softwrap": true,
+    "wordwrap": true
+}
+
+```
+- Tekan `Ctrl + s` untuk menyimpan file, lalu `Ctrl + q` untuk keluar.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br>
